@@ -18,7 +18,7 @@ exports.deterministicPartitionKey = (event) => {
       candidate = event.partitionKey;
     } else {
       const data = JSON.stringify(event);
-      candidate = createSha3512UsingData(data);
+      candidate = createSha3512UsingData(data); // Refactoring #2
     }
   }
 
@@ -28,7 +28,7 @@ exports.deterministicPartitionKey = (event) => {
 
   // If partitionKey is a string and its bigger than MAX_PARTITION_KEY_LENGTH, proceed to hash
   if (candidate.length > MAX_PARTITION_KEY_LENGTH) {
-    candidate = createSha3512UsingData(candidate);
+    candidate = createSha3512UsingData(candidate); // Refactoring #2
   }
   return candidate;
 };
