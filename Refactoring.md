@@ -10,6 +10,6 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 ## Your Explanation Here
 
-- Moved the constants to a separate file, a good practice to maintain constants in a separate file.
-- Moved the hashing function to a separate file, since we are using the same algorithm, updating the contents of the hash and also using the same digest calculation for both uses of the method, for a leaner and cleaner package file. 
-- Removed the else statement of the second if block and initialized the candidate var value with TRIVIAL_PARTITION_KEY, since the package always tries to return the literal provided in the TRIVIAL_PARTITION_KEY constant and we only modify the candidate at that point only if the partitionKey is an object and we need to stringify it.
+1. Moved the constants to a separate file, a good practice to maintain constants in a separate file.
+2. Moved the hashing function to a separate file, since we are using the same algorithm, updating the contents of the hash and also using the same digest calculation for both uses of the method, for a leaner and cleaner package file.
+3. Removed the else statement of the second if block and initialized the candidate var value with TRIVIAL_PARTITION_KEY, since the package always tries to return the literal provided in the TRIVIAL_PARTITION_KEY constant and we only modify the candidate at that point only if the partitionKey is an object and we need to stringify it.
